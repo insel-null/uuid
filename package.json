@@ -1,0 +1,46 @@
+{
+  "name": "@insel-null/uuid",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.20.0",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts",
+    "./v4": "./src/v4.ts",
+    "./v7": "./src/v7.ts"
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "./v4": {
+        "types": "./dist/v4.d.ts",
+        "default": "./dist/v4.js"
+      },
+      "./v7": {
+        "types": "./dist/v7.d.ts",
+        "default": "./dist/v7.js"
+      }
+    }
+  },
+  "scripts": {
+    "bench": "node --experimental-strip-types ./src/v7.bench.ts",
+    "build": "pkgroll",
+    "lint": "eslint .",
+    "test": "node --experimental-strip-types ./src/v7.test.ts"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.6.1",
+    "@moeru/eslint-config": "0.1.0-beta.13",
+    "@moeru/tsconfig": "0.1.0-beta.13",
+    "@types/node": "^25.0.0",
+    "eslint": "^9.39.1",
+    "mitata": "^1.0.34",
+    "pkgroll": "^2.21.4",
+    "uuid": "^13.0.0",
+    "uuidv7": "^1.1.0"
+  }
+}
