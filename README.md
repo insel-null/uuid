@@ -26,6 +26,11 @@ const uuid: `${string}-${string}-${string}-${string}-${string}` = v4() // uuid.v
 
 > `v4` is an alias for `crypto.randomUUID`.
 
+## Limitations
+
+- Your runtime must support `crypto.randomUUID()`. [(MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/randomUUID#browser_compatibility)
+- Doesn't implement the **OPTIONAL** sub-millisecond timestamp fraction or carefully seeded counter. [(RFC 9562)](https://www.rfc-editor.org/rfc/rfc9562#section-5.7)
+
 ## Benchmark
 
 ```bash
