@@ -9,7 +9,9 @@
     "./v4": "./src/v4.ts",
     "./v7": "./src/v7.ts"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "exports": {
       ".": {
@@ -29,6 +31,7 @@
   "scripts": {
     "bench": "node --experimental-strip-types ./src/v7.bench.ts",
     "build": "pkgroll",
+    "bump": "bumpp --no-push",
     "lint": "eslint .",
     "test": "node --experimental-strip-types ./src/v7.test.ts"
   },
@@ -37,6 +40,7 @@
     "@moeru/eslint-config": "0.1.0-beta.13",
     "@moeru/tsconfig": "0.1.0-beta.13",
     "@types/node": "^25.0.0",
+    "bumpp": "^10.3.2",
     "eslint": "^9.39.1",
     "mitata": "^1.0.34",
     "pkgroll": "^2.21.4",
