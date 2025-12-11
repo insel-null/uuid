@@ -4,6 +4,8 @@
   "version": "0.0.1",
   "packageManager": "pnpm@10.20.0",
   "license": "MIT",
+  "repository": "github:insel-null/uuid",
+  "bugs": "https://github.com/insel-null/uuid/issues",
   "exports": {
     ".": "./src/index.ts",
     "./v4": "./src/v4.ts",
@@ -13,6 +15,9 @@
     "dist"
   ],
   "publishConfig": {
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
